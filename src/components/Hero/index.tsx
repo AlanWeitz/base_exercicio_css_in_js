@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 
 const Form = styled.form`
-  height: 360px;
+  min-height: 360px;
   width: 100%;
   background-image: url('https://cdn.pixabay.com/photo/2018/08/10/15/45/woman-3597101_1280.jpg');
   background-size: cover;
+  background-position: center;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   &::before {
     position: absolute;
@@ -21,23 +23,26 @@ const Form = styled.form`
     opacity: 0.7;
   }
 
-  & div {
+  & > div {
     position: relative;
     color: #eee;
+    max-width: 800px;
+    padding: 0 16px;
   }
 
   @media (max-width: 768px) {
-    height: auto;
-    padding: 24px 0;
+    min-height: 280px;
+    padding: 40px 0;
   }
 `
 
 const HeroTitle = styled.h2`
   font-family: Gloock, serif;
   font-size: 48px;
+  line-height: 1.2;
 
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 28px;
   }
 `
 
